@@ -6,5 +6,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Activitee';
+  title = 'angular-blog';
+
+  posts = [
+    {
+      title: 'Hello World',
+      content: 'Encore un bout de code pour le bien etre de la tradittion',
+      loveIts: 24,
+      created_at: 'Wed Oct 30 2019 16:33:22'
+    },
+    {
+      title: 'Hello Angular',
+      content: 'Encore cette histoire qui casse la tete',
+      loveIts: 0,
+      created_at: 'Wed Oct 27 2019 16:33:22'
+    },
+    {
+      title: 'Hello Java',
+      content: 'Encore un bout de code pour le bien etre de la tradittion',
+      loveIts: 12,
+      created_at: 'Wed Oct 12 2019 16:33:22'
+    },
+    {
+      title: 'Hello Python',
+      content: 'Encore un bout de code pour le bien etre de la tradittion',
+      loveIts: 10,
+      created_at: 'Wed Oct 01 2019 16:33:22'
+    }
+  ];
 }
