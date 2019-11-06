@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { PostsService } from '../services/posts.service';
 @Component({
   selector: 'app-postlistitem',
   templateUrl: './postlistitem.component.html',
@@ -11,19 +11,25 @@ export class PostlistitemComponent implements OnInit {
   @Input() content: string;
   @Input() loveIts: number;
   @Input() created_at: Date;
+  @Input() index: number;
 
-  constructor() { }
+
+  constructor(private postsService : PostsService) { }
 
   ngOnInit() {
   }
 
-  onDontLoveIt() {
-    this.loveIts--;
-    console.log('Not love ' + this.loveIts);
+  onLoveIt(){
+    this.loveIts =this.postsService.onLoveIt(this.loveIts);
+    console.log(this.loveIts)
+  }
+  
+  onDontLoveIt(){
+    this.loveIts =this.postsService.onDontLoveIt(this.loveIts);
+    console.log(this.loveIts)
   }
 
-  onLoveIt() {
-    this.loveIts++;
-    console.log('love ' + this.loveIts);
+  onRemovePost(){
+    this.postsService.deletePost(this.index);
   }
 }
