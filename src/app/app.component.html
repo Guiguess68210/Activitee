@@ -1,6 +1,21 @@
-<div class="d-flex align-items-center p-3 my-3 bg-purple rounded shadow-sm">
-  <div class="lh-100">
-    <h1 class="mb-0 text-black lh-100">Blogger</h1>
+<nav class="navbar navbar-expand navbar-light bg-light">
+
+  <div class=" navbar-collapse">
+    <ul class=" navbar-nav">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="posts">Posts</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="newPost">Nouveau Post</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+    <router-outlet></router-outlet>
   </div>
 </div>
-<app-postlist [posts]='posts'></app-postlist>
+</div>

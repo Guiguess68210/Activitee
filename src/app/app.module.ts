@@ -7,6 +7,8 @@ import { PostlistitemComponent } from './postlistitem/postlistitem.component';
 import { FormsModule }   from '@angular/forms';
 import { NewPostComponent } from './new-post/new-post.component';
 import { PostsService } from './services/posts.service';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { PostsService } from './services/posts.service';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [PostsService],
