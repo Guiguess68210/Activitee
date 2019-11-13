@@ -5,7 +5,7 @@ export class PostsService{
 postsSubject = new Subject<any[]>();
 
 POSTS: Post[] = [
-    { title: 'Mon premier post', content: 'bla bla bla', loveIts: 0, created_at: new Date },
+    { title: 'Mon premier post', content: 'bla bla bla', loveIts: 2, created_at: new Date },
     { title: 'Mon deuxième post', content: 'bla bla bla', loveIts: 0, created_at: new Date },
     { title: 'Encore un post', content: 'bla bla bla', loveIts: 0, created_at: new Date }
   ]
